@@ -1,5 +1,5 @@
 import { ParseResult } from 'src/types.js';
-import { transformSync } from '@swc/core';
+import { Program, transformSync } from '@swc/core';
 import { IDGenerator } from './IDGenerator.js';
 
 export class ASTParser {
@@ -23,7 +23,7 @@ export class ASTParser {
           react: { runtime: 'automatic' },
         },
       },
-      plugin: (m) => this.visitor(m, filename),
+      plugin: (ast) => this.visitor(ast, filename),
     });
 
     return {
@@ -32,10 +32,10 @@ export class ASTParser {
     };
   }
 
-  private visitor(m: any, filename: string) {
+  private visitor(ast: Program, filename: string) {
     // TODO: Traverse AST
     // Replace JSXText or string lit props with __impress_content
     // Generate IDs using IDGenerator
-    return m;
+    return ast;
   }
 }
