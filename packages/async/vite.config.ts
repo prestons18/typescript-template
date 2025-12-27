@@ -9,7 +9,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
-    name: '@org/async',
+    name: '@impress/async',
     watch: false,
     globals: true,
     environment: 'node',

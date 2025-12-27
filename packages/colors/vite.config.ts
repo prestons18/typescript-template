@@ -9,7 +9,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
-    name: '@org/colors',
+    name: '@impress/colors',
     watch: false,
     globals: true,
     environment: 'node',

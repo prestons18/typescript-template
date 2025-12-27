@@ -14,6 +14,12 @@
     },
     {
       "path": "./packages/utils"
+    },
+    {
+      "path": "./compiler"
+    },
+    {
+      "path": "./packages/compiler"
     }
   ]
 }
